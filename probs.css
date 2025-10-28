@@ -1,0 +1,206 @@
+:root {
+    --uganda-yellow: #FFD700;
+    --uganda-black: #000000;
+    --uganda-red: #D90000;
+    --primary: #FFD700;
+    --secondary: #000000;
+    --accent: #006600;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+}
+
+/* Header Section */
+.header-section {
+    background: linear-gradient(135deg, var(--uganda-yellow), var(--uganda-black));
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.header-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Section Titles */
+.section-title {
+    color: var(--uganda-black);
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--uganda-yellow);
+}
+
+.section-subtitle {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Solution Cards */
+.solution-card .card-header {
+    border-bottom: 3px solid var(--uganda-black);
+}
+
+.solution-number {
+    background: var(--uganda-black);
+    color: var(--uganda-yellow);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Problem and Solution Sections */
+.problem-section {
+    background: #ffeaa7;
+    border-left: 4px solid #fdcb6e;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.solution-section {
+    background: #d1ecf1;
+    border-left: 4px solid #17a2b8;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.business-section {
+    background: #d4edda;
+    border-left: 4px solid #28a745;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Tables */
+.table th {
+    background-color: var(--uganda-black);
+    color: var(--uganda-yellow);
+    border-color: var(--uganda-black);
+}
+
+.table-bordered {
+    border-color: var(--uganda-black);
+}
+
+.table-bordered th,
+.table-bordered td {
+    border-color: var(--uganda-black);
+}
+
+/* Buttons */
+.btn-warning {
+    background-color: var(--uganda-yellow);
+    border-color: var(--uganda-yellow);
+    color: var(--uganda-black);
+    font-weight: 600;
+}
+
+.btn-warning:hover {
+    background-color: #e6c200;
+    border-color: #e6c200;
+    color: var(--uganda-black);
+}
+
+.btn-outline-dark {
+    border-color: var(--uganda-black);
+    color: var(--uganda-black);
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--uganda-black);
+    color: white;
+}
+
+/* Navigation */
+.navbar-dark {
+    background-color: var(--uganda-black) !important;
+}
+
+.navbar-brand {
+    font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-section h1 {
+        font-size: 2rem;
+    }
+    
+    .solution-card {
+        margin-bottom: 2rem;
+    }
+    
+    .btn-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-section {
+        padding: 3rem 0;
+    }
+    
+    .header-section h1 {
+        font-size: 1.75rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .btn, .navbar {
+        display: none !important;
+    }
+    
+    .solution-card {
+        break-inside: avoid;
+        margin-bottom: 2rem;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+}
+
+/* Animation for cards */
+.solution-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.solution-card:hover {
+    transform: translateY(-5px);
+}
